@@ -1,0 +1,22 @@
+<%- include('partials/header') %> 
+
+ <main class="allArticles">
+
+    <% for(const oneArticle of allArticles ) { %>
+               
+        <div class="allArticles_page-articles">
+
+            <img src="<%= oneArticle.picture  %> " alt="photo de l'article n°<%= oneArticle.id %>" class="article_img">
+
+            <h3 class="article_title"><a href="" class="article_title-link"> <%= oneArticle.title %> </a></h3>
+
+        </div>
+    
+    <% } %>
+
+ </main>
+
+ <%- include('partials/footer') %>  
+
+</body>
+</html>
