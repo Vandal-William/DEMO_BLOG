@@ -1,0 +1,100 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    width: 100%;
+       
+}
+
+/* ======================= HEADER =========================== */
+
+.header{
+    height:10vh;
+    width: 100%;
+    background-color: gray;
+    box-shadow: 0.1rem 0.1rem 0.3rem #b1b1b1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title{
+    margin-left: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.nav-container{
+   display: flex;
+   gap: 1rem;
+   margin-right: 1rem;
+
+}
+
+.nav-items{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover{
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+/* ===================== MAIN HOME PAGE =========================== */
+
+.main{
+    margin: 2rem;
+    height: 80vh;
+    
+}
+
+.home_page-content{
+    width: 100%;
+    height: 40vh;
+    border: 0.1rem solid #eaeaea;
+    border-radius: 0.9rem;
+}
+
+.home_page-title{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;   
+}
+
+.home_page-text{
+    padding: 1rem;
+}
+
+.home_page-img{
+    width: 100%;
+    max-height: 69%;
+   
+}
+
+.home_page-last_articles-container{
+    
+    width: 100%;
+    height: 45vh;
+}
+
+.footer{
+    height: 5vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer-text{
+    padding: 1.5rem;
+}
