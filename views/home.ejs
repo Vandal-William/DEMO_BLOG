@@ -16,17 +16,22 @@
 
         </div>
 
+        <h2 class="home_page-title">Last articles</h2>
+
         <div class="home_page-last_articles-container">
             
-            <h2 class="home_page-title">Last articles</h2>
 
-            <div class="home_page-last-articles_articles">
-
-                <img src="" alt="" class="last-article_img">
-
-                <h3 class="last-article_title"><a href="" class="last-article_title-link"> </a></h3>
-
-            </div>
+            <% for( const article of lastArticle ) { %>
+               
+                <div class="home_page-last-articles_articles">
+    
+                    <img src="<%= article.picture  %> " alt="photo de l'article n°<%= article.id %>" class="last-article_img">
+    
+                    <h3 class="last-article_title"><a href="" class="last-article_title-link"> <%= article.title  %> </a></h3>
+    
+                </div>
+            
+            <% } %>
         </div>
      
     </main>
