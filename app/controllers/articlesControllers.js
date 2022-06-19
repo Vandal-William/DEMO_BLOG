@@ -11,8 +11,24 @@ const articlesControllers = {
           .catch(error => {
             res.status(500).render('500', {error});
           })
-    }
+    },
 
+    renderOneArticlePage(req, res, next){
+      const articleId = req.params.id;
+      const query = `SELECT * FROM article WHERE id = ${articleId}`;
+      db.query(query)
+        .then(results => {
+          if(results.rows.length === 0){
+            next();
+            return;
+          }
+          const oneArticleWant = results.rows[0];
+          res.render('oneArticle', {oneArticleWant})
+        })
+        .catch(error => {
+          res.status(500).render('500', {error});
+        })
+    }
 
 };
 

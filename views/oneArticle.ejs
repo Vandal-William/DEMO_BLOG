@@ -1,0 +1,15 @@
+<%- include('partials/header') %> 
+
+<main class="one-article_page-container">
+
+    <img src="<%= oneArticleWant.picture  %>" alt="photo de l'article n°<%= oneArticleWant.id %>" class="one-article_page-img">
+
+    <h2 class="one-article_page-title"><%= oneArticleWant.title  %></h2>
+
+    <p class="one-article_page-content"><%= oneArticleWant.content %></p>
+
+</main>
+
+<%- include('partials/footer') %>    
+</body>
+</html>
