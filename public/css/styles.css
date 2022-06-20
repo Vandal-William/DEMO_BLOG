@@ -52,8 +52,12 @@ body{
 /* ===================== MAIN HOME PAGE INFO =========================== */
 
 .main{
-    margin: 2rem;
+    
     height: 80vh;
+    max-width: 110rem;
+    margin: auto;
+    margin-top: 2rem;
+
     
 }
 
@@ -116,7 +120,9 @@ body{
 }
 /* ===================== ALL ARTICLES PAGE =========================== */
 .allArticles{
-    margin: 2rem;
+    max-width: 110rem;
+    margin: auto;
+    margin-top: 2rem;
     height: 80vh;
     border: 0.1rem solid #eaeaea;
     display: flex;
@@ -151,7 +157,9 @@ body{
 /* ===================== ONE ARTICLE PAGE =========================== */
 
 .one-article_page-container{
-    margin: 2rem;
+    max-width: 110rem;
+    margin: auto;
+    margin-top: 2rem;
     height: 80vh;
     border: 0.1rem solid #eaeaea;
     border-radius: 0.9rem;
