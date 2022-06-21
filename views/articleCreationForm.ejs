@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<main class="main_base-class">
+
+ <form action="" method="post" class="form_article">
+
+    <div class="insert-image-ca">
+
+        <label for="input-image-ca" class="label-image-ca">Ajouter une image</label>
+        <input type="file" id="input-image-ca" name="input-image-ca" class="input-image-ca">
+
+    </div>
+
+    <div class="insert-title-ca">
+
+        <label for="input-title-ca" class="label-title">Ajouter un titre</label>
+        <input type="text" id="input-title-ca" name="input-title-ca"  class="input-title-ca">
+
+    </div>
+
+    <div class="insert-content-ca">
+
+        <label for="textarea-ca" name="textarea-ca" class="label-content"></label>
+        <textarea name="textarea-ca" id="textarea-ca" cols="30" rows="10" class="textarea-content"></textarea>
+
+    </div>
+
+    <button class="submit_from-ca">Ajouter l'article</button>
+
+ </form>
+
+</main>
+
+<%- include('partials/footer') %>
+
+</body>
+</html>

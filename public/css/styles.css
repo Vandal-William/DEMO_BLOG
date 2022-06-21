@@ -156,7 +156,7 @@ body{
 
 /* ===================== ONE ARTICLE PAGE =========================== */
 
-.one-article_page-container{
+.one-article_page-container, .main_base-class{
     max-width: 110rem;
     margin: auto;
     margin-top: 2rem;
@@ -224,3 +224,5 @@ body{
     font-size: 2.5rem;
     text-align: center;
 }
+
+/* ===================== FORM CREATION ARTICLE =========================== */
