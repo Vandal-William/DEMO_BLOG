@@ -1,33 +1,39 @@
-const db = require('../database/client');
+const dataMapper = require('../database/dataMapper');
 
 const articlesControllers = {
 
-    renderAllArticlesPage(req, res){
-        db.query('SELECT * FROM article ORDER BY id ASC')
-          .then(results => {
-            const allArticles = results.rows;
-            res.render('allArticles', { allArticles });
-          })
-          .catch(error => {
+    async renderAllArticlesPage(req, res){
+        try{
+
+          const allArticlesWant = await dataMapper.fetchAllArticles();
+          res.render('allArticles', { allArticlesWant });
+
+        }catch(error) {
+
             res.status(500).render('500', {error});
-          })
+          }
     },
 
-    renderOneArticlePage(req, res, next){
+    async renderOneArticlePage(req, res, next){
+
       const articleId = req.params.id;
-      const query = `SELECT * FROM article WHERE id = ${articleId}`;
-      db.query(query)
-        .then(results => {
-          if(results.rows.length === 0){
-            next();
-            return;
-          }
-          const oneArticleWant = results.rows[0];
-          res.render('oneArticle', {oneArticleWant})
-        })
-        .catch(error => {
+
+      try {
+        const oneArticleWant = await dataMapper.fetchOneArticle(articleId);
+
+        if(! oneArticleWant) {
+
+          next();
+
+        }else{
+
+          res.render('oneArticle', {oneArticleWant});
+
+        }
+
+      }catch(error) {
           res.status(500).render('500', {error});
-        })
+        }
     }
 
 };

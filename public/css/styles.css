@@ -196,3 +196,31 @@ body{
     padding: 1.5rem;
     font-weight: bold;
 }
+
+/* ===================== PAGE 500 et 404 =========================== */
+
+.page-error{
+    max-width: 110rem;
+    margin: auto;
+    margin-top: 2rem;
+    height: 80vh;
+    border: 0.1rem solid #eaeaea;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.status{
+    font-size: 30rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.message-error{
+    font-size: 2.5rem;
+    text-align: center;
+}
