@@ -19,7 +19,7 @@ const adminControllers = {
         // Formater l'article et l'envoyer a la bdd
         const addedArticle = await dataMapper.addArticle(article);
         // rediriger sur l'article créer
-        res.redirect(`/article/${addedArticle}`);
+        res.status(200).redirect('/');
    },
 
     async oneDeleteArticle(req, res) {

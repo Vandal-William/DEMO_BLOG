@@ -4,26 +4,26 @@
 
  <form action="/admin/articles" method="POST" enctype="multipart/form-data" class="form_article">
 
-    <div class="insert-image-ca">
+    <h1 class="form-title-ca">AJOUTER UN ARTICLE</h1>
 
-        <label for="input-image-ca" class="label-image-ca">Ajouter une image</label>
-        <input type="file" id="input-image-ca" name="picture" class="input-image-ca">
+        <label for="input-image-ca" class="label-image-ca">Ajoutez une image :</label>
+        <input type="file" id="input-image-ca" name="picture" class="input-image-ca" required>
 
-    </div>
+ 
 
-    <div class="insert-title-ca">
+
 
         <label for="input-title-ca" class="label-title">Ajouter un titre</label>
-        <input type="text" id="input-title-ca" name="title"  class="input-title-ca">
+        <input type="text" id="input-title-ca" name="title"  class="input-title-ca" required>
 
-    </div>
 
-    <div class="insert-content-ca">
 
-        <label for="textarea-ca" name="content" class="label-content"></label>
+    
+
+        <label for="textarea-ca" name="content" class="label-content">Ajoutez votre texte</label>
         <textarea name="content" id="textarea-ca" cols="30" rows="10" class="textarea-content"></textarea>
 
-    </div>
+
 
     <button class="submit_from-ca">Ajouter l'article</button>
 
