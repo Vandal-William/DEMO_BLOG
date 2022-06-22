@@ -1,14 +1,28 @@
 const { Router } = require('express');
-const homeController = require('./controllers/homeController');
-const articlesControllers = require('./controllers/articlesControllers');
-const formArticleController = require('./controllers/formArticleController');
+
+const { 
+
+    homeController,
+    articlesControllers,
+    adminControllers, 
+    
+} = require('./controllers');
+
+const upload = require('../upload/multer');
+
 
 const router = Router();
 
 router.get('/', homeController.renderHomePage);
 router.get('/articles', articlesControllers.renderAllArticlesPage);
 router.get('/articles/:id', articlesControllers.renderOneArticlePage);
-router.get('/form', formArticleController.renderFromArticlePage);
+router.get('/admin/articles', adminControllers.renderFromArticlePage);
+
+router.post('/admin/articles', upload.single('picture'), adminControllers.addArticleAndRedirect);
+
+router.get('/admin/:id', adminControllers.oneDeleteArticle);
+
+
 
 
 module.exports = router;

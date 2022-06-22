@@ -1,6 +1,8 @@
 <%- include('partials/header') %> 
 
-<main class="one-article_page-container">
+<main class="one-article_page">
+    
+    <div class="main_base-class">
 
     <img src="<%= oneArticleWant.picture  %>" alt="photo de l'article n°<%= oneArticleWant.id %>" class="one-article_page-img">
 
@@ -8,6 +10,12 @@
 
     <p class="one-article_page-content"><%= oneArticleWant.content %></p>
 
+    </div>
+   
+        <a class="delete" href="/admin/<%= oneArticleWant.id %>">Delete</a>
+    
+        <button class="update">Update</button>
+    
 </main>
 
 <%- include('partials/footer') %>    

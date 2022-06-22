@@ -155,14 +155,26 @@ body{
 }
 
 /* ===================== ONE ARTICLE PAGE =========================== */
-
-.one-article_page-container, .main_base-class{
+.one-article_page{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.main_base-class{
     max-width: 110rem;
     margin: auto;
     margin-top: 2rem;
     height: 80vh;
     border: 0.1rem solid #eaeaea;
     border-radius: 0.9rem;
+}
+
+.admin-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0 0 0;
+    margin: 0 9rem 0 9rem;
+
 }
 
 .one-article_page-img{

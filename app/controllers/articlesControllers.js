@@ -20,7 +20,7 @@ const articlesControllers = {
 
       try {
         const oneArticleWant = await dataMapper.fetchOneArticle(articleId);
-
+        // const deleted = await dataMapper.deleteArticle(articleId)
         if(! oneArticleWant) {
 
           next();
