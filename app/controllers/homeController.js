@@ -1,10 +1,11 @@
 const dataMapper = require('../database/dataMapper');
 
+
 const homeController = {
    async renderHomePage(req, res){
-    try {
-
-      const lastArticle = await dataMapper.fetchLastArticles();
+     try {
+       const lastArticle = await dataMapper.fetchLastArticles();
+      
       res.render('home', { lastArticle });
 
     } catch(error) {

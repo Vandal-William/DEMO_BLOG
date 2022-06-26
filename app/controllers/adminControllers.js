@@ -1,9 +1,11 @@
 const dataMapper = require("../database/dataMapper");
-
+const connextion = require("./connexionController");
 
 const adminControllers = {
     renderFromArticlePage(req, res) {
+       
         res.render('articleCreationForm');
+       
     },
    async addArticleAndRedirect(req, res) {
         // je récupère le path de l'image
