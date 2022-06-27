@@ -92,6 +92,11 @@ body{
     max-height: 69%;
    
 }
+.message-bienvenu{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
 
 /* ===================== MAIN HOME PAGE LAST ARTICLES =========================== */
 
@@ -216,15 +221,111 @@ body{
     padding: 1rem;
 }
 
+.comment{
+    border: 0.1rem solid #eaeaea;
+    margin: auto;
+    margin-bottom: 2rem;
+    max-width: 110rem;
+    min-width: 110rem;
+    height: 35rem;
+    background-color: gray;
+}
 
+.comment-title{
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+.show-comment{
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    margin: 2rem;
+    padding: 2rem;
+    height: 15rem;
+    background-color: #eaeaea;
+}
+
+.from-add-comment{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    margin: 1rem;
+    max-width: 90rem;
+    min-width: 90rem;
+    height: 3rem;
+    
+}
+.submit-form-comment{
+    height: 4rem;
+    max-width: 14rem;
+    min-width: 14rem;
+}
+
+.message-if-not-connected{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.delete-update-div{
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    height: 4rem;
+    max-width: 110rem;
+    min-width: 110rem;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #b1b1b1;
+   
+
+} 
+
+.delete, .update{
+ padding: 0.7rem;
+ background-color: orange;
+ text-decoration: none;
+ color: black;
+ box-shadow: 0.1rem 0.1rem 0.3rem black;
+ font-weight: bold;
+ 
+}
+
+.delete:hover{
+    color: black;
+    background-color: red;
+    text-shadow: 0.1rem 0.1rem 0.3rem white;
+    box-shadow: 0.1rem 0.1rem 0.3rem white;
+    font-weight: bold;
+}
+.update:hover{
+    color: black;
+    background-color: yellowgreen;
+    text-shadow: 0.1rem 0.1rem 0.3rem white;
+    box-shadow: 0.1rem 0.1rem 0.3rem white;
+    font-weight: bold;
+}
+    
 /* ===================== FOOTER =========================== */
 
 .footer{
-    height: 5vh;
+    height: 5.9rem;
     background-color: black;
     color: white;
     text-align: center;
     width: 100%;
+
     
    
 }
@@ -232,6 +333,7 @@ body{
     padding: 1.5rem;
     font-weight: bold;
 }
+
 
 /* ===================== PAGE 500 et 404 =========================== */
 
@@ -320,4 +422,54 @@ body{
     font-weight: bold;
     text-shadow: 0.1rem 0.1rem 0.3rem black;
     color: orange;
+}
+
+/* =========================== PAGE DE CONNECTION ==================================== */
+
+.modify{
+    height: 68rem;
+}
+
+.form-user{
+ border: 0.1rem solid black ;
+ margin: 10rem;
+ padding: 15rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ background-color: gray;
+ 
+}
+
+.username-label{
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.password-label{
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+#username, #password{
+   height: 3rem;
+   box-shadow: 0.1rem 0.1rem 0.3rem black;
+   border: none;
+}
+
+.submit-form-connexion{
+    height: 3rem;
+    margin-top: 2rem;
+    background-color: orange;
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    border: none;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
+
 }

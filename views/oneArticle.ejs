@@ -1,20 +1,45 @@
 <%- include('partials/header') %> 
 
 <main class="one-article_page">
+
+    <div class="comment">
+        <h2 class="comment-title">Comments: </h2>
+        <div class="show-comment">
+        <% for( const comments of commentsWanted ) { %>
+            <p class="content-comments"><%= comments.username %>: <%= comments.comment_content %></p> 
+        <% } %>
+        </div>
+        <% if (session.user !== '') { %>
+            <form class="from-add-comment" action="/commented/<%= oneArticleWant.id %>" method="post">   
+                <input type="text" name="content" id="content" placeholder="Ajouter un commentaire...">
+                <button class="submit-form-comment">Envoyer</button>
+            </form>
+            <% } else { %>
+                <p class="message-if-not-connected">
+                    Vous devez être connecté pour envoyer un commentaire
+                </p>
+        <% } %> 
+         
+    </div>
     
     <div class="main_base-class">
 
-    <img src="<%= oneArticleWant.picture  %>" alt="photo de l'article n°<%= oneArticleWant.id %>" class="one-article_page-img">
+        <img src="<%= oneArticleWant.picture  %>" alt="photo de l'article n°<%= oneArticleWant.id %>" class="one-article_page-img">
 
-    <h2 class="one-article_page-title"><%= oneArticleWant.title  %></h2>
+        <h2 class="one-article_page-title"><%= oneArticleWant.title  %></h2>
 
-    <p class="one-article_page-content"><%= oneArticleWant.content %></p>
+        <p class="one-article_page-content"><%= oneArticleWant.content %></p>
 
     </div>
-   
-        <a class="delete" href="/admin/<%= oneArticleWant.id %>">Delete</a>
+
     
-        <button class="update">Update</button>
+    <% if (session.user === 'admin') { %>
+        <div class="delete-update-div">
+            <a class="delete" href="/admin/<%= oneArticleWant.id %>">Delete</a>
+            <a class="update" href="#">Update</a>
+        </div>     
+    <% } %>
+   
     
 </main>
 

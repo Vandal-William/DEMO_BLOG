@@ -1,5 +1,4 @@
 const dataMapper = require("../database/dataMapper");
-const connextion = require("./connexionController");
 
 const adminControllers = {
     renderFromArticlePage(req, res) {
@@ -15,12 +14,13 @@ const adminControllers = {
         // j'applique un path de fichier qui match avec mon app
         pathImageWant = `/images/${originalName}`;
         // je récupérer les données du body de la requete POST
-        const article = req.body; 
+        const article = req.body;
+        const sessionUserId = req.session.user_id; 
         //j'applique le path dans le champ picture
         article.picture = pathImageWant;
         // Formater l'article et l'envoyer a la bdd
-        const addedArticle = await dataMapper.addArticle(article);
-        // rediriger sur l'article créer
+        const addedArticle = await dataMapper.addArticle(article, sessionUserId);
+        // rediriger sur la homePage
         res.status(200).redirect('/');
    },
 

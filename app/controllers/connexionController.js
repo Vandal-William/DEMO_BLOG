@@ -21,15 +21,19 @@ const connexion = {
         if(usernameVerify && passwordVerify){
             // si sa match j'ajoute le username et le role dans la session
             const session = req.session;
+            session.user_id = usernameVerify.id
             session.role = usernameVerify.role;
             session.user = usernameVerify.username;
             // et je rédirige vers la page d'accueil 
-            res.status(200).redirect('/');   
+            res.status(200).redirect('/');
+            console.log(session);   
         }     
     },
 
     deconnectAndRenderHomePage(req, res){
         req.session.user = '';
+        req.session.role = '';
+        req.session.user_id = null;
         res.redirect('/');
     }
 

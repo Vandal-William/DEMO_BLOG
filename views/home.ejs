@@ -1,7 +1,11 @@
 <%- include('partials/header') %> 
 
     <main class="main">
-        <p>Bonjour <%= session.user  %>,  </p>
+
+        <% if (session.user !== '') { %>
+            <p class="message-bienvenu">Bonjour <%= session.user  %>,  </p>
+        <% } %>
+        
         <div class="home_page-content"> 
 
             <img src="/images/home_page_img.jpeg" alt="" class="home_page-img">

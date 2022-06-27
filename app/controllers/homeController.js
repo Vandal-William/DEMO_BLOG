@@ -3,6 +3,7 @@ const dataMapper = require('../database/dataMapper');
 
 const homeController = {
    async renderHomePage(req, res){
+    console.log(req.session)
      try {
        const lastArticle = await dataMapper.fetchLastArticles();
       

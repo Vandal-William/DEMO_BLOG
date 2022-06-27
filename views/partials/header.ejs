@@ -16,9 +16,9 @@
                     <li class="nav-items"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-items"><a href="/articles" class="nav-link">Articles</a></li>
                     <% if (session.user !== '') { %>
-                        <% if (session.role === 'Admin') { %>
+                         <% if (session.role === 'Admin') { %>
                             <li class="nav-items"><a href="/admin/articles" class="nav-link">Add</a></li>
-                        <% } %>
+                            <% } %> 
                         <li class="nav-items"><a href="/deconnected" class="nav-link">Déconnection</a></li>                    
                         <li class="nav-items"><a href="#" class="nav-link"> <%= session.user %>  </a></li>
                     <% } else { %>
