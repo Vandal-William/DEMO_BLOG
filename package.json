@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "resetDB": "psql -U demoblog -d demoblog -f ./data/create_db.sql"
   },
   "repository": {
     "type": "git",
